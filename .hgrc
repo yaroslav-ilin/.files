@@ -1,3 +1,3 @@
 [ui]
-ignore = ~/.hgignore_global
+ignore = ~/.config/hgignore_global
 
