@@ -16,8 +16,8 @@ set fileformats=unix,dos,mac
 
 " Don't create swap files
 set nobackup 
-" set nowb
-" set noswapfile
+set nowb
+set noswapfile
 
 colorscheme slate
 
