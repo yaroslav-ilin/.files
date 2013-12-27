@@ -126,3 +126,5 @@ set laststatus=2
 " Never show built-in status line
 set noshowmode
 
+let g:peepopen_quit = 1
+
