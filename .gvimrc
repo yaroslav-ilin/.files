@@ -10,7 +10,7 @@ set guioptions-=T " no toolbar, tearoff menu items and menu bar at all
 if has("gui_macvim")
 
 	set guioptions-=r
-	set guifont=Monaco:h12
+	set guifont=Monaco\ for\ Powerline:h12
 
 	set transparency=10
 

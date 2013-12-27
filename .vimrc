@@ -119,3 +119,10 @@ endif
 
 let html_use_css=1
 
+let g:airline_theme = "powerlineish"
+let g:airline_powerline_fonts = 1
+" Always show Airline
+set laststatus=2
+" Never show built-in status line
+set noshowmode
+
