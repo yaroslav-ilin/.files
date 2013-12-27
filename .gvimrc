@@ -1,7 +1,7 @@
 " set background=light
 colorscheme solarized
 
-set lines=43
+set lines=47
 set columns=146
 
 set guioptions-=T " no toolbar, tearoff menu items and menu bar at all
@@ -12,7 +12,7 @@ if has("gui_macvim")
 	set guioptions-=r
 	set guifont=Monaco\ for\ Powerline:h12
 
-	set transparency=10
+	set transparency=5
 
 	" PeepOpen settings
 	macmenu &File.Open\.\.\. key=<nop>
