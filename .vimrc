@@ -64,12 +64,6 @@ endif
 
 " nmap ; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-" Bundle 'altercation/vim-colors-solarized'
-" Bundle 'tpope/vim-fugitive'
-
 set tabstop=4 shiftwidth=4 noexpandtab textwidth=79
 
 " Only do this part when compiled with support for autocommands.
@@ -124,6 +118,4 @@ if !exists(":DiffOrig")
 endif
 
 let html_use_css=1
-
-" source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
