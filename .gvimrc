@@ -14,6 +14,11 @@ if has("gui_macvim")
 
 	set transparency=10
 
+	" PeepOpen settings
+	macmenu &File.Open\.\.\. key=<nop>
+	map <D-o> <Plug>PeepOpen
+	let g:peepopen_quit = 1
+
 elseif has("gui_gtk2")
 elseif has("x11")
 elseif has("gui_win32")
