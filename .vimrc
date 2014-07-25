@@ -103,7 +103,7 @@ if has("autocmd")
 	" Ruby (tab width 2 chr, wrap at 79th char)
 	autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 	" Python (tab width 4 chr, wrap at 79th char)
-	autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+	autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=160 textwidth=159
 
 else
 	set autoindent		" always set autoindenting on
