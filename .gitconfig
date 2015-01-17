@@ -4,3 +4,7 @@
 [credential]
 	helper = osxkeychain
 
+[user]
+	name = 
+	email = 
+
