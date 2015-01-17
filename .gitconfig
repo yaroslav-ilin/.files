@@ -8,3 +8,7 @@
 	name = 
 	email = 
 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
