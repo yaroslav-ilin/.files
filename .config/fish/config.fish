@@ -9,6 +9,9 @@ set BROWSER "open -a firefox"
 set -gx PYTHONDONTWRITEBYTECODE true
 set -gx PYTHONPATH /usr/local/lib/python2.7/site-packages
 
+# Java
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home
+
 # Android
 set -gx ANDROID_HOME /usr/local/opt/android-sdk
 

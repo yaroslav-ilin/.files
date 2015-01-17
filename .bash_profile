@@ -6,6 +6,8 @@ export SUDO_PS1=$'\\[\e[36m\\]\W\\[\e[0m\\] \\[\e[31m\\]\xe2\x86\x92\\[\e[0m\\] 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 # To use curl-ca-bundle certificates with OpenSSL:
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
