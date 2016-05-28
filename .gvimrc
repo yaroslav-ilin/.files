@@ -12,7 +12,7 @@ if has("gui_macvim")
 	set guioptions-=r
 	set guifont=Monaco\ for\ Powerline:h12
 
-	set transparency=5
+	" set transparency=5
 
 	" PeepOpen settings
 	macmenu &File.Open\.\.\. key=<nop>
