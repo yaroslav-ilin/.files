@@ -39,3 +39,6 @@ Thumbs.db
 *.swp
 .svn
 
+node_modules
+.vscode
+
