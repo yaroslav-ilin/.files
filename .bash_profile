@@ -11,14 +11,17 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 # To use curl-ca-bundle certificates with OpenSSL:
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
-# For node.js: to have npm-installed binaries picked up
-export PATH="/usr/local/share/npm/bin:$PATH"
 # Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
 
 alias ls="ls -Ghtr"
 alias ll="ls -lA"
+
+alias svn="colorsvn"
 
