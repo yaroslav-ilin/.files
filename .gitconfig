@@ -1,18 +1,47 @@
 [core]
-	excludesfile = ~/.config/gitignore_global
+       excludesfile = ~/.config/gitignore_global
+       whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+       editor = vim
 
 [credential]
-	helper = osxkeychain
+       helper = osxkeychain
 
 [user]
-	name = 
-	email = 
+       name =
+       email =
+
+[color]
+       diff = auto
+       status = auto
+       branch = auto
+       ui = auto
+
+[alias]
+       app = commit --amend -C HEAD
+       br = branch
+       ci = commit
+       co = checkout
+       di = diff -M -C -C
+       dic = diff -M -C -C --cached
+       lg = log -M -C -C --name-status
+       onto = rebase --onto
+       rec = rebase --continue
+       sh = show -M -C -C
+       st = status
+       svn-rm = !sh -c 'git co $1 && svn rm $(git svn info --url) -m \"Delete branch $1\" && git co - && git br -r -d $1' -
+       export = !sh -c 'git checkout-index -a -f --prefix=$1' -
+
+[svn]
+       rmdir = true
+
+[branch]
+       autosetuprebase = always
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+       cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+       path =
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+       cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+       trustExitCode = true
 
