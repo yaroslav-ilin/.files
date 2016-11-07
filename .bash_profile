@@ -35,3 +35,7 @@ alias ll="ls -lA"
 
 alias svn="colorsvn"
 
+# To allow any key to get things flowing again
+# http://unix.stackexchange.com/a/12108/138836
+stty ixany
+
