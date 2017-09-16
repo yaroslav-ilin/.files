@@ -1,5 +1,5 @@
-export LC_CTYPE=ru_RU.UTF-8
-export LANG=ru_RU.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 source ~/.bashrc
 source ~/.files/git-prompt.sh
@@ -11,21 +11,9 @@ export PROMPT_COMMAND='__git_ps1 "\w\\[\e[32m\\]" "\\[\e[0m\\] \$ "'
 export PROMPT_DIRTRIM=3
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-# bash autocomplete must ignore any *.deps.js
-export FIGNORE='.deps.js'
 
-# export JAVA_HOME="$(/usr/libexec/java_home)"
-
-# To use curl-ca-bundle certificates with OpenSSL
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
-# For node.js: to have npm-installed binaries picked up
-# export PATH="/usr/local/share/npm/bin:$PATH"
-# Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
-# rbenv
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
+# Run NPM-provided local binaries when in root of node project
+export PATH="$PATH:./node_modules/.bin"
 
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
@@ -35,7 +23,7 @@ alias ll="ls -lA"
 
 alias svn="colorsvn"
 
-# To allow any key to get things flowing again
-# http://unix.stackexchange.com/a/12108/138836
+# See: http://unix.stackexchange.com/a/12108/138836
+# Paused by Ctrl+S terminal must be unfrozen by any key (not only Ctrl+Q combo)
 stty ixany
 
