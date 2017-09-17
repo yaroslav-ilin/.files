@@ -17,15 +17,26 @@ fi
 
 # some more ls aliases
 alias lr='ls -RF | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-alias ll='ls -FAcl@h'
+alias ll='ls -FAltrh'
 
-cd() { builtin cd "$@"; ll; }
+cd() { builtin cd "$@"; ls -1Fcr; }
 
-alias ls="ls -Ghtr"
-# alias ll="ls -lA"
+alias tmux="tmux attach || tmux new"
+alias svn="colorsvn"
 
-#   cdf:  'Cd's to frontmost window of MacOS Finder
-#   ------------------------------------------------------
+alias rm-DS_Store='find . -name *.DS_Store -type f -delete'
+
+alias grep-js='grep -rn --exclude-dir=.svn --exclude-dir=examples --exclude-dir="*.i18n" --color=auto --include="*.js"'
+alias grep-css='grep -rn --exclude-dir=.svn --exclude-dir=examples --color=auto --include="*.css" --include="*.less"'
+
+# -----
+# macOS
+# -----
+
+alias upgrade="sudo softwareupdate -i -a && brew update && brew upgrade"
+
+#   cdf:  'cd' to frontmost window of macOS Finder
+#   -----------------------------------------------
 cdf () {
     currFolderPath=$( /usr/bin/osascript <<EOT
         tell application "Finder"
@@ -42,20 +53,6 @@ EOT
     cd "$currFolderPath"
 }
 
-alias tmux="tmux attach || tmux new"
-alias svn="colorsvn"
-
-alias rm-DS_Store='find . -name *.DS_Store -type f -delete'
-
-alias grep-js='grep -rn --exclude-dir=.svn --exclude-dir=examples --exclude-dir="*.i18n" --color=auto --include="*.js"'
-alias grep-css='grep -rn --exclude-dir=.svn --exclude-dir=examples --color=auto --include="*.css" --include="*.less"'
-
-# -----
-# macOS
-# -----
-
-alias upgrade="sudo softwareupdate -i -a && brew update && brew upgrade"
-
 # ------
 # Ubuntu
 # ------
@@ -63,3 +60,4 @@ alias upgrade="sudo softwareupdate -i -a && brew update && brew upgrade"
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
