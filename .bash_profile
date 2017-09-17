@@ -18,11 +18,6 @@ export PATH="$PATH:./node_modules/.bin"
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 
-alias ls="ls -Ghtr"
-alias ll="ls -lA"
-
-alias svn="colorsvn"
-
 # See: http://unix.stackexchange.com/a/12108/138836
 # Paused by Ctrl+S terminal must be unfrozen by any key (not only Ctrl+Q combo)
 stty ixany
