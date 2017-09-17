@@ -7,7 +7,8 @@ source ~/.files/git-prompt.sh
 # export PS1=$'\\[\e[36m\\]\W\\[\e[0m\\] \\[\e[32m\\]\xe2\x86\x92\\[\e[0m\\] '
 # export SUDO_PS1=$'\\[\e[36m\\]\W\\[\e[0m\\] \\[\e[31m\\]\xe2\x86\x92\\[\e[0m\\] '
 
-export PROMPT_COMMAND='__git_ps1 "\w\\[\e[32m\\]" "\\[\e[0m\\] \$ "'
+export GIT_PS1_SHOWCOLORHINTS=1
+export PROMPT_COMMAND='__git_ps1 "\w" " \$ "'
 export PROMPT_DIRTRIM=3
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
