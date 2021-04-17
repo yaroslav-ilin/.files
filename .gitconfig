@@ -10,6 +10,9 @@
        name =
        email =
 
+[commit]
+       gpgsign = true
+
 [color]
        diff = auto
        status = auto
@@ -28,11 +31,7 @@
        rec = rebase --continue
        sh = show -M -C -C
        st = status
-       svn-rm = !sh -c 'git co $1 && svn rm $(git svn info --url) -m \"Delete branch $1\" && git co - && git br -r -d $1' -
        export = !sh -c 'git checkout-index -a -f --prefix=$1' -
-
-[svn]
-       rmdir = true
 
 [branch]
        autosetuprebase = always
